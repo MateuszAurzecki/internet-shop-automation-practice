@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<suite name="Test_1">
+    <parameter name="driverPath" value="src\\main\\resources\\Geckodriver.exe"/>
+    <parameter name="url" value="http://automationpractice.com/"/>
+    <parameter name="email" value="test123strone112354851@o2.pl"/>
+    <parameter name="firstName" value="Adam"/>
+    <parameter name="lastName" value="Adams"/>
+    <parameter name="password" value="abc123!$A"/>
+    <parameter name="day" value="10  "/>
+    <parameter name="month" value="April "/>
+    <parameter name="year" value="1983  "/>
+    <parameter name="addressName" value="Adam"/>
+    <parameter name="addressSurname" value="Adams"/>
+    <parameter name="addressFirstLine" value="warszawska 25"/>
+    <parameter name="city" value="Warszawa"/>
+    <parameter name="state" value="Alabama"/>
+    <parameter name="zip" value="11233"/>
+    <parameter name="country" value="United States"/>
+    <parameter name="mobilePhone" value="1231231231"/>
+    <parameter name="alias" value="My address"/>
+
+
+
+
+    <test name="Wykonaj transakcję">
+        <classes>
+            <class name="pl.b2bnetwork.cfg.CfgTest">
+                <methods>
+                    <include name="setUp"/>
+                    <include name="openSite"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.homePage.HomeTest">
+                <methods>
+                    <include name="clickOnWomenTabTest"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.womenPage.WomenTest">
+                <methods>
+                    <include name="addingProductsToBasketTest"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.basketPage.BasketTest">
+                <methods>
+                    <include name="clickOnProceedToCheckoutButtonTest"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.authorizationPage.AuthorizationTest">
+                <methods>
+                    <include name="clickOnCreateAccountButtonTest"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.createAccountPage.CreateAccountTest">
+                <methods>
+                    <include name="createAccountTest"/>
+                </methods>
+            </class>
+            <class name="pl.b2bnetwork.page.checkoutPage.CheckoutTest">
+                <methods>
+                    <include name="checkoutPagesTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="zamkniecie web drivera">
+    <classes>
+    <class name="pl.b2bnetwork.cfg.CfgTest">
+    <methods>
+    <include name="tearUp"/>
+    </methods>
+    </class>
+    </classes>
+    </test>
+</suite>
